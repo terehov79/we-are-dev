@@ -21,6 +21,7 @@
   border: none;
   outline: none;
   font-size: 22px;
+  color: $baseBlackLite;
   line-height: 1;
   margin-right: 30px;
   @include size(19px, 22px);
@@ -41,7 +42,6 @@
   .fa-xmark {
     display: block;
   }
-  
 }
 
 .play {

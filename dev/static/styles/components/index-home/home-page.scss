@@ -6,15 +6,25 @@
     }
     @include sm {
         height: calc(100vh - 84px);
+        background-image: url('../img/content/about-company.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     &-wrap {
         width: 100;
+
     }
     video {
         @include size(100%);
         display: block;
         object-fit: cover;
         object-position: center center;
+    }
+    * {
+        @include sm {
+            display: none!important;
+        }
     }
 }
 

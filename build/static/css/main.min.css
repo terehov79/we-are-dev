@@ -145,6 +145,7 @@ textarea {
   border: none;
   outline: none;
   font-size: 22px;
+  color: #181819;
   line-height: 1;
   margin-right: 30px;
   width: 19px;
@@ -304,7 +305,7 @@ textarea {
       font-size: 16px;
       color: #393C49; }
       .header-socials a:hover, .footer-socials a:hover {
-        color: #9094A6; }
+        color: #9195a6; }
   .header-logo a {
     display: inline-block; }
   @media (max-width: 767px) {
@@ -459,7 +460,11 @@ textarea {
       height: 500px; } }
   @media (max-width: 767px) {
     .hero {
-      height: calc(100vh - 84px); } }
+      height: calc(100vh - 84px);
+      background-image: url("../img/content/about-company.jpg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; } }
   .hero-wrap {
     width: 100; }
   .hero video {
@@ -470,6 +475,9 @@ textarea {
     object-fit: cover;
     -o-object-position: center center;
     object-position: center center; }
+  @media (max-width: 767px) {
+    .hero * {
+      display: none !important; } }
 
 .projects {
   width: 100%;
