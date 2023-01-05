@@ -1,0 +1,13 @@
+mixin icon(names, mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + names + ' ' + mod)
+		use(xlink:href="static/img/svg-sprites/symbol/sprite.svg#" + names)
+
+mixin link(href, text, addClass)
+	a(href= href class= addClass title= text)= text
+
+mixin logotype
+	a(href="index.html").logotype
+		picture._image
+			source(srcset='static/img/general/logo.webp', type='image/webp')._img
+			img(src='static/img/general/logo.png', alt='img')._img

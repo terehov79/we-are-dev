@@ -1,0 +1,54 @@
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include sm {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__item {
+    display: inline-block;
+    @include sm {
+      margin-bottom: 15px;
+    }
+    &:not(:last-child) {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 60%;
+        right: -63px;
+        transform: translateY(-50%);
+        @include size(3px);
+        border-radius: 50%;
+        background-color: $baseBlackLite;
+        z-index: 1;
+        @include lg {
+          right: -45px;
+        }
+        @include md {
+          right: -20px;
+        }
+        @include sm {
+          content: none;
+        }
+      }
+    }    
+  }
+  &__link {
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $baseBlackLite;
+    &:hover {
+      color: $baseGray;
+    }
+    @include sm {
+      font-size: 16px;
+    }
+  }
+}

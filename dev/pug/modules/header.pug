@@ -1,0 +1,31 @@
+header.header 
+  .header-info-wrap
+    .container
+      .header-info
+        .header-socials
+          a(href="#" title='facebook')
+            i.fa-brands.fa-facebook-f
+          a(href="#" title='instagram')
+            i.fa-brands.fa-instagram
+          a(href="#" title='pinterest')
+            i.fa-brands.fa-pinterest-p
+        .header-logo
+          button(type="button" name="menu").burger
+            i.fa-solid.fa-bars
+            i.fa-solid.fa-xmark
+          a(href="#" title='WE ART')
+            img(src="./static/img/svg/logotype.svg" alt="WE ART" title="WE ART" width="160" height="28")
+        ul.header-lang
+          li
+            a(href="/eng/" title="eng")
+              | eng
+          li
+            a(href="/" title="рус").active
+              | рус
+          li
+            a(href="/pol/" title="pol")
+              | pol
+  .header-nav-wrap 
+    .container
+      .header-nav
+        include menu

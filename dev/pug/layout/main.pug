@@ -1,0 +1,15 @@
+include ../mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+  include head
+  body(class=pageClass)
+    .wrapper
+      include ../modules/header
+      main.content
+        block content
+      include ../modules/footer
+    script(src="static/js/libs.min.js")
+    script(src="static/js/main.min.js")
+    block script

@@ -1,0 +1,120 @@
+.header {
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: $baseWhite;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.3);
+    &-info {
+        width: 100%;
+        padding: 30px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include sm {
+            height: 84px;
+            padding: 0;
+        }
+        &-wrap {
+            width: 100%;
+        }
+    }
+    &-socials {
+        min-width: 136px;
+        display: flex; 
+        justify-content: flex-start;
+        align-items: center;
+        @include sm {
+            display: none;
+        }
+        a {
+            display: inline-block;
+            margin-right: 20px;
+            font-size: 16px;
+            color: #393C49;
+            &:hover {
+                color: #9094A6  ;
+            }
+        }
+    }
+    &-logo {
+        a {
+            display: inline-block;
+        }
+        @include sm {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            img {
+                @include size(110px, 22px)
+            }
+        }
+    }
+    &-lang {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        li {
+            margin-left: 20px;
+            a {
+                font-size: 11px;
+                line-height: 13px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: $baseGray;
+                transition: $transition;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    top: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    @include size(3px);
+                    border-radius: 50%;
+                    background-color: $baseBlackLite;
+                    transition: $transition;
+                    opacity: 0;
+                    z-index: 1;
+                }
+                &:hover {
+                    color: $baseBlackLite;
+                    &::before {
+                        transform: translateX(-50%) scale(1.2);
+                    }
+                }
+                &.active {
+                    color: $baseBlackLite;
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+            
+        }
+    }
+    &-nav {
+        width: 100%;
+        padding: 20px 0;
+        &-wrap {
+            width: 100%;
+            border-top: 1px solid #E8EAEF;
+            @include sm {
+                @include size(100%, calc(100%  - 82px));
+                position: fixed;
+                left: -105%;
+                bottom: 0;
+                z-index: 998;
+                background-color: #fff;
+                overflow-y: auto;
+                transition: $transition;
+            }
+        }
+        &-wrap.active {
+            left: 0;
+        }  
+    }
+}
