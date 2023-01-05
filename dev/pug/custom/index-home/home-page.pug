@@ -6,11 +6,7 @@
       i.fa-solid.fa-play
       i.fa-solid.fa-pause
     video(autoplay='' loop='' muted='' src='./static/video/homepage-hero-video-sm.mp4').video
-    //- picture
-    //-   source(srcset='./static/img/content/about-company.webp' type='image/webp')
-    //-   img(src='./static/img/content/about-company.jpg' alt='About Company' title='About Company' width='462' height='734')
-
-
+    
 .projects
   .container
     h2 Новые проекты
@@ -20,7 +16,7 @@
           a(href="#" title=projects[i]).projects-item
             picture 
               source(srcset='./static/img/content/project'+i+'.webp' type='image/webp')
-              img(src='<./static/img/content/project'+i+'.jpg' alt=projects[i] title=projects[i] width='360' height='288')
+              img(src='./static/img/content/project'+i+'.jpg' alt=projects[i] title=projects[i] width='360' height='288')
             p= projects[i]
 
 .information-wrap 

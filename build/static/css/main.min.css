@@ -425,6 +425,8 @@ textarea {
         margin: 0 7px; } }
   .footer-socials a {
     color: #949597; }
+    .footer-socials a:hover {
+      color: #393C49; }
   @media (max-width: 767px) {
     .footer-copyright {
       padding: 10px 0; } }
@@ -466,7 +468,7 @@ textarea {
       background-repeat: no-repeat;
       background-size: cover; } }
   .hero-wrap {
-    width: 100; }
+    width: 100%; }
   .hero video {
     width: 100%;
     height: 100%;

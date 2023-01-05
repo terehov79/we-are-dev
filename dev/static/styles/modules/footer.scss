@@ -23,6 +23,9 @@
     }
     a {
       color: #949597;
+      &:hover {
+        color: #393C49;
+      }
     }
   }
   &-copyright {
